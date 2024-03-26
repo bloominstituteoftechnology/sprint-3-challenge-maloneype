@@ -25,9 +25,10 @@
 <body>
   <h1>Web Sprint 3 Challenge </h1>
   <p>❗ See the last script tag for instructions on completing your Challenge</p>
+  <p>hello</p>
   <!-- widgets start, do not modify -->
   <section class="widget">
-    <p>This widget uses the EBook class</p>
+    <p>This widget uses the EBook class!</p>
     <textarea placeholder="Write your book"></textarea><br />
     <input type="number" placeholder="Characters per page" /><br /><br />
     <button id="turnPage">Turn Page</button>
@@ -93,19 +94,6 @@
     }
     // 👉 CHALLENGE 2 NerfGun
     class NerfGun {
-      // 🧠 Constructor takes one argument: the total number of projectiles supported by the instance
-      // 🧠 New instances initialize fully loaded and with the safety on
-      // 🧠 Instances have a `shoot` method that takes no arguments:
-      //      * If there is ammo left and safety is off, method consumes one projectile and returns the string "Bang!"
-      //      * Shooting on empty or with the safety on, returns the string "Click!"
-      // 🧠 Instances have a `reload` method that takes a number and tops up the instance by that number
-      //      * Reloading returns a string in the following format: "<number> projectiles left!"
-      //      * Reloading by more than capacity fills the instance to capacity
-      //      * Passing an argument which is not a number larger than zero returns the string "Error reloading!"
-      // 🧠 Instances have a `toggleSafety` method that takes no arguments and switches the state of the safety
-      //      * When engaging the safety, return "Safety enabled!"
-      //      * When disengaging the safety, return "Safety disabled!"
-      // 🌟 HINT: instances need to keep track of their maximum capacity as well as their current capacity
       constructor(capacity) {
         this.capacity = capacity
         this.projectiles = capacity
@@ -175,36 +163,6 @@
 
     // 👉 CHALLENGE 4 AntFarm
     class AntFarm {
-      // 🧠 Constructor takes **any** number of arguments, which are strings: the names of your ants
-      // 🧠 Instances of AntFarm have an `ants` property holding an array of ants:
-      //      * Each ant is an object with a `name` prop and a `health` prop that starts at 100
-      // 🧠 Instances of AntFarm have a `work` method:
-      //      * When invoked your ants do chores at a cost of 20 health points each
-      //      * The method takes no arguments and returns the string "<ant number> ants starting work!"
-      //      * If the `health` of any ant decreases to zero or below, it dies and is removed from `ants`
-      //      * If `ants` contains no ants, the method returns "No ants here. Did you work them to death?"
-      // 🧠 Instances of AntFarm have a `feed` method:
-      //      * The method takes as its only argument the name of the particular ant(s) to feed
-      //      * When invoked, the ant(s) by the given name obtain a health increase of 15 points
-      //      * The method returns the string "Yum!" if any ants by the given name exist
-      //      * The method returns the string "<ant name> not found!" if no ants by the given name exist
-      // 🌟 Example:
-      //      const farm = new AntFarm('Jess', 'Blake');
-      //      farm.ants;         // evaluates to [{name: 'Jess', health: 100}, {name: 'Blake', health: 100}]
-      //      farm.work();       // returns "2 ants starting work!"
-      //      farm.ants;         // evaluates to [{name: 'Jess', health: 80}, {name: 'Blake', health: 80}]
-      //      farm.feed('Jess'); // returns "Yum!"
-      //      farm.ants;         // evaluates to [{name: 'Jess', health: 95}, {name: 'Blake', health: 80}]
-      // 👉 HINT: when replacing a list with a modified list of the same length you can use map:
-      //      let list = ['a','b','c']
-      //      list = list.map(item => (item === "a" ? item + item : item))
-      //      console.log(list) // prints ["aa","b","c"]
-      // 👉 HINT: when replacing a list with a filtered list you can use filter:
-      //      let list = ['a','b','c']
-      //      list = list.filter(item => item === "a")
-      //      console.log(list) // prints ["a"]
-      // 👉 HINT: if you are not feeling confident with map and filter, solve the problem with for loops,
-      //      and with the piece of mind of all tests passing, refactor to use map/filter
       constructor(...names) {
         this.ants = []
         this.antCount = names.length
